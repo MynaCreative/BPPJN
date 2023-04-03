@@ -31,7 +31,7 @@
         <h3 class="fw-bold">Berita Terbaru</h3>
     </div>
     <div class="row posts-md col-mb-30">
-        <div class="col-lg-4 col-md-6">
+        <div class="col-lg-3 col-md-6">
             <div class="entry">
                 <div class="entry-image">
                     <a href="{{ route('publikasi-single') }}"><img src="/images/post/1.jpg" alt="Image" class="rounded"></a>
@@ -47,7 +47,7 @@
                 </div>
             </div>
         </div>
-        <div class="col-lg-4 col-md-6">
+        <div class="col-lg-3 col-md-6">
             <div class="entry">
                 <div class="entry-image">
                     <a href="{{ route('publikasi-single') }}"><img src="/images/post/2.jpg" alt="Image" class="rounded"></a>
@@ -63,7 +63,7 @@
                 </div>
             </div>
         </div>
-        <div class="col-lg-4 col-md-6">
+        <div class="col-lg-3 col-md-6">
             <div class="entry">
                 <div class="entry-image">
                     <a href="{{ route('publikasi-single') }}"><img src="/images/post/3.jpg" alt="Image" class="rounded"></a>
@@ -75,6 +75,22 @@
                     <ul>
                         <li><i class="uil uil-schedule"></i> 30th Dec 2023</li>
                         <li><a href="{{ route('publikasi-single') }}"><i class="uil uil-eye"></i> 13</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-3 col-md-6">
+            <div class="entry">
+                <div class="entry-image">
+                    <a href="{{ route('publikasi-single') }}"><img src="/images/post/1.jpg" alt="Image" class="rounded"></a>
+                </div>
+                <div class="entry-title title-xs text-transform-none px-2">
+                    <h3><a href="{{ route('publikasi-single') }}">Kementerian PUPR Pastikan Jalan Nasional Sepanjang 262Km di Yogyakarta Siap Sambut Momentum Mudik Lebaran 2023</a></h3>
+                </div>
+                <div class="entry-meta px-2">
+                    <ul>
+                        <li><i class="uil uil-schedule"></i> 13th Jun 2023</li>
+                        <li><a href="{{ route('publikasi-single') }}"><i class="uil uil-eye"></i> 53</a></li>
                     </ul>
                 </div>
             </div>
@@ -210,18 +226,11 @@
                     Buletin
                 </div>
                 <div id="oc-images" class="owl-carousel image-carousel carousel-widget mb-6" data-items-xs="1" data-items-sm="1" data-items-lg="1" data-items-xl="1">
+                    @for ($i = 1; $i <= 12; $i++)
                     <div class="oc-item">
-                        <a href="{{ route('publikasi-single') }}"><img src="/images/buletin/1.jpg" alt="Image 1"></a>
+                        <a href="https://online.fliphtml5.com/jstpy/acjv/"><img src="/images/buletin/{{$i}}.jpg" alt="Image {{$i}}"></a>
                     </div>
-                    <div class="oc-item">
-                        <a href="{{ route('publikasi-single') }}"><img src="/images/buletin/2.jpg" alt="Image 2"></a>
-                    </div>
-                    <div class="oc-item">
-                        <a href="{{ route('publikasi-single') }}"><img src="/images/buletin/3.jpg" alt="Image 3"></a>
-                    </div>
-                    <div class="oc-item">
-                        <a href="{{ route('publikasi-single') }}"><img src="/images/buletin/4.jpg" alt="Image 4"></a>
-                    </div>
+                    @endfor
                 </div>
             </div>
         </div>
