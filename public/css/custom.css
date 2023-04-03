@@ -1,0 +1,53 @@
+/* ----------------------------------------------------------------
+	Custom CSS
+
+	Add all your Custom Styled CSS here for New Styles or
+	Overwriting Default Theme Styles for Better Handling Updates
+-----------------------------------------------------------------*/
+
+
+.img-darker{
+	-webkit-filter: brightness(45%); /* Safari 6.0 - 9.0 */
+  	filter: brightness(45%);
+}
+
+.bg-batik{
+	background: url('/images/batik-pu.jpg') center center;
+	background-size: 100%;
+}
+
+.whats-app {
+    position: fixed;
+    width: 60px;
+    height: 60px;
+    bottom: 30px;
+    background-color: #25d366;
+    color: #FFF;
+    border-radius: 50px;
+    text-align: center;
+    font-size: 30px;
+    box-shadow: 1px 1px 2px #333;
+    z-index: 100;
+    left: 30px;
+}
+
+.wa-float {
+    margin-top: 8px;
+}
+
+.entry-image img {
+    border-radius: 3px;
+    border-bottom-right-radius: 130px !important;
+    border-bottom: 5px solid var(--cnvs-themecolor);
+
+    height: 200px !important;
+    object-fit: cover
+}
+
+.mega-menu-content-medium{
+    width: 800px !important;
+}
+
+.page-menu-wrap-clone {
+    margin: 0 !important;
+ }
