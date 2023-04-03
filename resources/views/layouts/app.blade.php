@@ -47,8 +47,8 @@
 		</section>
         @include('components.footer')
     </div>
-	<a  class="whats-app" href="#" target="_blank">
-		<i class="fa-brands fa-whatsapp wa-float"></i>
+	<a  class="whats-app" href="https://wa.me/+628119225246">
+		<img src="/images/link/callcenter.png" alt="WhatsApp">
 	</a>
     <div id="gotoTop" class="uil uil-angle-up"></div>
     <script src="/js/functions.js"></script>
@@ -56,6 +56,10 @@
 	<script>
 		$(document).ready(function() {
 			var titles = [
+				{
+					name: "Selamat Datang Di Website Balai Besar Pelaksanaan Jalan Nasional DKI Jakarta - Jawa Barat",
+					link: "#",
+				},
 				{
 					name: "Kementerian PUPR Pastikan Jalan Nasional Sepanjang 262Km di Yogyakarta Siap Sambut Momentum Mudik Lebaran 2023",
 					link: "http://Kementerian PUPR Pastikan Jalan Nasional Sepanjang 262Km di Yogyakarta Siap Sambut Momentum Mudik Lebaran 2023",

@@ -8,7 +8,7 @@
         <div id="page-menu-wrap">
             <div class="container">
                 <div class="page-menu-row">
-                    <div class="page-menu-title"><span>Pengumuman</span><i class="fa-sharp fa-solid fa-angle-right mx-2"></i></div>
+                    <div class="page-menu-title text-uppercase" style="font-size:14px"><span>Pengumuman</span><i class="fa-sharp fa-solid fa-angle-right mx-2"></i></div>
                     <nav class="page-menu-nav">
                         <ul class="page-menu-container">
                             <li class="page-menu-item current">
@@ -28,7 +28,7 @@
 
 <div class="container">
     <div class="fancy-title title-border title-center text-uppercase">
-        <h3 class="fw-bold">Berita Terbaru</h3>
+        <h3 class="fw-bold" style="color:var(--cnvs-themecolor)">Berita Terbaru</h3>
     </div>
     <div class="row posts-md col-mb-30">
         <div class="col-lg-3 col-md-6">
@@ -66,10 +66,10 @@
         <div class="col-lg-3 col-md-6">
             <div class="entry">
                 <div class="entry-image">
-                    <a href="{{ route('publikasi-single') }}"><img src="/images/post/3.jpg" alt="Image" class="rounded"></a>
+                    <a href="{{ route('publikasi-single') }}"><img src="/images/post/1.jpg" alt="Image" class="rounded"></a>
                 </div>
                 <div class="entry-title title-xs text-transform-none px-2">
-                    <h3><a href="{{ route('publikasi-single') }}">Target Tersambung 3.196 Km Pada Akhir Tahun 2024, Kementerian PUPR Komitmen Wujudkan Penyelenggaraan Jalan Tol yang Berkelanjutan</a></h3>
+                    <h3><a href="{{ route('publikasi-single') }}">Target Tersambung 3.196 Km Pada Akhir Tahun 2024, PUPR Komitmen Wujudkan Penyelenggaraan Jalan Tol yang Berkelanjutan</a></h3>
                 </div>
                 <div class="entry-meta px-2">
                     <ul>
@@ -82,7 +82,7 @@
         <div class="col-lg-3 col-md-6">
             <div class="entry">
                 <div class="entry-image">
-                    <a href="{{ route('publikasi-single') }}"><img src="/images/post/1.jpg" alt="Image" class="rounded"></a>
+                    <a href="{{ route('publikasi-single') }}"><img src="/images/post/2.jpg" alt="Image" class="rounded"></a>
                 </div>
                 <div class="entry-title title-xs text-transform-none px-2">
                     <h3><a href="{{ route('publikasi-single') }}">Kementerian PUPR Pastikan Jalan Nasional Sepanjang 262Km di Yogyakarta Siap Sambut Momentum Mudik Lebaran 2023</a></h3>
@@ -97,20 +97,20 @@
         </div>
     </div>
     <div class="text-center mt-4">
-		<a href="{{ route('publikasi-index') }}" class="button button-small button-danger button-circle">Index Berita <i class="fa-sharp fa-solid fa-angle-right"></i></a>
+		<a href="{{ route('publikasi-index') }}" class="button button-border button-small button-red button-circle text-uppercase">Index Berita <i class="fa-sharp fa-solid fa-chevron-right"></i></a>
 	</div>
 </div>
 
 <div class="container">
     <div class="fancy-title title-border title-center mt-6 text-uppercase">
-        <h3 class="fw-bold">Daftar Informasi Publik</h3>
+        <h3 class="fw-bold" style="color:var(--cnvs-themecolor)">Daftar Informasi Publik</h3>
     </div>
 	<div id="portfolio" class="portfolio row portfolio-reveal grid-container">
-		<article class="portfolio-item col-6 col-md-4 col-lg-3 pf-media pf-icons">
+		<article class="portfolio-item col-md-4 col-lg-3 pf-media pf-icons">
 			<div class="grid-inner">
 				<div class="portfolio-image">
 					<a href="{{ route('publikasi-single') }}">
-						<img src="/images/service/1.jpg" alt="Open Imagination">
+						<img src="/images/service/1.jpg" alt="Open Imagination" style="filter:sepia(100) hue-rotate(310deg) saturate(4)">
 					</a>
 					<!-- <div class="bg-overlay">
 						<div class="bg-overlay-content dark" data-hover-animate="fadeIn" data-hover-parent=".portfolio-item">
@@ -120,44 +120,44 @@
 						<div class="bg-overlay-bg dark" data-hover-animate="fadeIn" data-hover-parent=".portfolio-item"></div>
 					</div> -->
 				</div>
-				<div class="portfolio-desc">
-					<h3><a href="{{ route('publikasi-single') }}">Maklumat Pelayanan</a></h3>
+				<div class="portfolio-desc text-center ">
+					<h3><a href="{{ route('publikasi-single') }}" style="color:var(--cnvs-themecolor)" class="fw-bold text-uppercase">Lihat Detail</a></h3>
 				</div>
 			</div>
 		</article>
-		<article class="portfolio-item col-6 col-md-4 col-lg-3 pf-illustrations">
+		<article class="portfolio-item col-md-4 col-lg-3 pf-illustrations">
 			<div class="grid-inner">
 				<div class="portfolio-image">
 					<a href="{{ route('publikasi-single') }}">
-						<img src="/images/service/2.jpg" alt="Locked Steel Gate">
+						<img src="/images/service/2.jpg" alt="Locked Steel Gate" style="filter:sepia(100) hue-rotate(310deg) saturate(4)">
 					</a>
 				</div>
-				<div class="portfolio-desc">
-					<h3><a href="{{ route('publikasi-single') }}">Informasi Berkala</a></h3>
+				<div class="portfolio-desc text-center ">
+					<h3><a href="{{ route('publikasi-single') }}" style="color:var(--cnvs-themecolor)" class="fw-bold text-uppercase">Lihat Detail</a></h3>
 				</div>
 			</div>
 		</article>
-		<article class="portfolio-item col-6 col-md-4 col-lg-3 pf-graphics pf-uielements">
+		<article class="portfolio-item col-md-4 col-lg-3 pf-graphics pf-uielements">
 			<div class="grid-inner">
 				<div class="portfolio-image">
 					<a href="{{ route('publikasi-single') }}">
-						<img src="/images/service/3.jpg" alt="Mac Sunglasses">
+						<img src="/images/service/3.jpg" alt="Mac Sunglasses" style="filter:sepia(100) hue-rotate(310deg) saturate(4)">
 					</a>
 				</div>
-				<div class="portfolio-desc">
-					<h3><a href="{{ route('publikasi-single') }}">Informasi Setiap Saat</a></h3>
+				<div class="portfolio-desc text-center ">
+					<h3><a href="{{ route('publikasi-single') }}" style="color:var(--cnvs-themecolor)" class="fw-bold text-uppercase">Lihat Detail</a></h3>
 				</div>
 			</div>
 		</article>
-		<article class="portfolio-item col-6 col-md-4 col-lg-3 pf-icons pf-illustrations">
+		<article class="portfolio-item col-md-4 col-lg-3 pf-icons pf-illustrations">
 			<div class="grid-inner">
 				<div class="portfolio-image">
 					<a href="{{ route('publikasi-single') }}">
-						<img src="/images/service/4.jpg" alt="Open Imagination">
+						<img src="/images/service/4.jpg" alt="Open Imagination" style="filter:sepia(100) hue-rotate(310deg) saturate(4)">
 					</a>
 				</div>
-				<div class="portfolio-desc">
-					<h3><a href="{{ route('publikasi-single') }}">Informasi Serta Merta</a></h3>
+				<div class="portfolio-desc text-center ">
+					<h3><a href="{{ route('publikasi-single') }}" style="color:var(--cnvs-themecolor)" class="fw-bold text-uppercase">Lihat Detail</a></h3>
 				</div>
 			</div>
 		</article>
@@ -166,7 +166,7 @@
 
 <div class="container">
     <div class="fancy-title title-border title-center mt-6 text-uppercase">
-        <h3 class="fw-bold">Pelayanan Publik</h3>
+        <h3 class="fw-bold" style="color:var(--cnvs-themecolor)">Pelayanan Publik</h3>
     </div>
 	<div id="oc-clients" class="owl-carousel image-carousel carousel-widget" data-margin="60" data-loop="true" data-nav="false" data-autoplay="5000" data-pagi="false" data-items-xs="2" data-items-sm="3" data-items-md="4" data-items-lg="4" data-items-xl="4">
 		<div class="oc-item"><a href="{{ route('publikasi-single') }}"><img src="/images/link/salira.png" alt="Clients"></a></div>
@@ -178,11 +178,11 @@
 
 <div class="container">
     <div class="fancy-title title-border title-center mt-6 text-uppercase">
-        <h3 class="fw-bold">Publikasi</h3>
+        <h3 class="fw-bold" style="color:var(--cnvs-themecolor)">Publikasi</h3>
     </div>
 	<div class="row align-items-top">
         <div class="col-lg-3">
-            <div class="card border-0">
+            <div class="card border-0 mb-4">
                 <div class="card-header text-center text-white bg-batik fw-bold text-uppercase">
                     Infografis
                 </div>
@@ -203,7 +203,7 @@
             </div>
         </div>
         <div class="col-lg-6">
-            <div class="card border-0">
+            <div class="card border-0 mb-4">
                 <div class="card-header text-center text-white bg-batik fw-bold text-uppercase">
                     Video
                 </div>
@@ -221,7 +221,7 @@
             </div>
         </div>
         <div class="col-lg-3">
-            <div class="card border-0">
+            <div class="card border-0 mb-4">
                 <div class="card-header text-center text-white bg-batik fw-bold text-uppercase">
                     Buletin
                 </div>
@@ -240,7 +240,7 @@
 @production
 <div class="container">
     <div class="fancy-title title-border title-center text-uppercase">
-        <h3 class="fw-bold">Media Sosial</h3>
+        <h3 class="fw-bold" style="color:var(--cnvs-themecolor)">Media Sosial</h3>
     </div>
     <div class="row align-items-top col-mb-50">
         <div class="col-lg-6">

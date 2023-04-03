@@ -1,4 +1,4 @@
-<header id="header" class="transparent-header semi-transparent">
+<header id="header" class="transparent-header semi-transparent dark" data-sticky-class="not-dark">
     <div id="header-wrap">
         <div class="container">
             <div class="header-row">
@@ -16,12 +16,12 @@
                 <nav class="primary-menu">
                     <ul class="menu-container">
                         <li class="menu-item {{ request()->routeIs('home') ? 'current' : '' }}">
-                            <a class="menu-link" href="{{ route('home') }}">
+                            <a class="menu-link text-uppercase" href="{{ route('home') }}">
                                 <div>Beranda</div>
                             </a>
                         </li>
                         <li class="menu-item mega-menu sub-menu {{ request()->routeIs('profile') | request()->routeIs('organization') ? 'current' : '' }}">
-                            <a class="menu-link" href="#">
+                            <a class="menu-link text-uppercase" href="#">
                                 <div>Profil<i class="fa-solid fa-caret-down"></i></div>
                             </a>
                             <div class="mega-menu-content">
@@ -110,7 +110,7 @@
                                                         </a>
                                                         <ul class="sub-menu-container" style="box-sizing: border-box;">
                                                             <li class="menu-item">
-                                                                <a class="menu-link" href="#"><div>Foto</div></a>
+                                                                <a class="menu-link" href="{{ route('gallery') }}"><div>Foto</div></a>
                                                             </li>
                                                             <li class="menu-item">
                                                                 <a class="menu-link" href="https://www.youtube.com/channel/UCY0_aWLhgheVwFRpQVwBvrg"><div>Video</div></a>
@@ -163,8 +163,8 @@
                                 </li>
                             </ul>
                         </li> -->
-                        <li class="menu-item">
-                            <a class="menu-link" href="#">
+                        <li class="menu-item {{ request()->routeIs('publikasi-index') | request()->routeIs('publikasi-single') ? 'current' : '' }}">
+                            <a class="menu-link text-uppercase" href="#">
                                 <div>Publikasi</div>
                             </a>
                             <ul class="sub-menu-container">
@@ -185,8 +185,8 @@
                                 </li>
                             </ul>
                         </li>
-                        <li class="menu-item">
-                            <a class="menu-link" href="#">
+                        <li class="menu-item {{ request()->routeIs('gallery') ? 'current' : '' }}">
+                            <a class="menu-link text-uppercase" href="#">
                                 <div>Galleri</div>
                             </a>
                             <ul class="sub-menu-container">
@@ -199,7 +199,7 @@
                             </ul>
                         </li>
                         <li class="menu-item {{ request()->routeIs('contact') ? 'current' : '' }}">
-                            <a class="menu-link" href="{{ route('contact') }}">
+                            <a class="menu-link text-uppercase" href="{{ route('contact') }}">
                                 <div>Kontak</div>
                             </a>
                         </li>
