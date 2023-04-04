@@ -183,7 +183,7 @@
 	<div class="row align-items-top">
         <div class="col-lg-3">
             <div class="card border-0 mb-4">
-                <div class="card-header text-center text-white bg-batik fw-bold text-uppercase">
+                <div class="card-header text-center text-white bg-batik fw-bold text-uppercase mb-2">
                     Infografis
                 </div>
                 <div id="oc-images" class="owl-carousel image-carousel carousel-widget mb-6" data-items-xs="1" data-items-sm="1" data-items-lg="1" data-items-xl="1">
@@ -204,25 +204,68 @@
         </div>
         <div class="col-lg-6">
             <div class="card border-0 mb-4">
-                <div class="card-header text-center text-white bg-batik fw-bold text-uppercase">
+                <div class="card-header text-center text-white bg-batik fw-bold text-uppercase mb-2">
                     Video
                 </div>
-                <div class="video-facade position-relative" data-video-html='<iframe width="560" height="315" src="https://www.youtube.com/embed/cFTzM0xzYTs" allowfullscreen></iframe>'>
-                    <div class="video-facade-preview">
-                        <img src="https://img.youtube.com/vi/cFTzM0xzYTs/maxresdefault.jpg" alt="Video Facade Video Preview" class="w-100">
-                        <div class="bg-overlay">
-                            <div class="bg-overlay-content dark">
-                                <a href="#" class="overlay-trigger-icon size-lg op-ts op-07 bg-light text-dark" data-hover-animate="op-1" data-hover-animate-out="op-07"><i class="bi-play-fill fs-2 position-relative" style="left:1px"></i></a>
+                <div class="row g-2">
+                    <div class="col-12">
+                        <div class="video-facade position-relative" data-video-html='<iframe width="560" height="315" src="https://www.youtube.com/embed/M_7jf0_8o8I" allowfullscreen></iframe>'>
+                            <div class="video-facade-preview">
+                                <img src="https://img.youtube.com/vi/M_7jf0_8o8I/maxresdefault.jpg" alt="Video Facade Video Preview" class="w-100">
+                                <div class="bg-overlay">
+                                    <div class="bg-overlay-content dark">
+                                        <a href="#" class="overlay-trigger-icon size-lg op-ts op-07 bg-light text-dark" data-hover-animate="op-1" data-hover-animate-out="op-07"><i class="bi-play-fill fs-2 position-relative" style="left:1px"></i></a>
+                                    </div>
+                                </div>
                             </div>
+                            <div class="video-facade-content"></div>
                         </div>
                     </div>
-                    <div class="video-facade-content"></div>
+                    <div class="col-4">
+                        <div class="video-facade position-relative" data-video-html='<iframe width="560" height="315" src="https://www.youtube.com/embed/E-PWNawxL4U" allowfullscreen></iframe>'>
+                            <div class="video-facade-preview">
+                                <img src="https://img.youtube.com/vi/E-PWNawxL4U/maxresdefault.jpg" alt="Video Facade Video Preview" class="w-100">
+                                <div class="bg-overlay">
+                                    <div class="bg-overlay-content dark">
+                                        <a href="#" class="overlay-trigger-icon size-lg op-ts op-07 bg-light text-dark" data-hover-animate="op-1" data-hover-animate-out="op-07"><i class="bi-play-fill fs-2 position-relative" style="left:1px"></i></a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="video-facade-content"></div>
+                        </div>
+                    </div>
+                    <div class="col-4">
+                        <div class="video-facade position-relative" data-video-html='<iframe width="560" height="315" src="https://www.youtube.com/embed/7GaKdV1l3xw" allowfullscreen></iframe>'>
+                            <div class="video-facade-preview">
+                                <img src="https://img.youtube.com/vi/7GaKdV1l3xw/maxresdefault.jpg" alt="Video Facade Video Preview" class="w-100">
+                                <div class="bg-overlay">
+                                    <div class="bg-overlay-content dark">
+                                        <a href="#" class="overlay-trigger-icon size-lg op-ts op-07 bg-light text-dark" data-hover-animate="op-1" data-hover-animate-out="op-07"><i class="bi-play-fill fs-2 position-relative" style="left:1px"></i></a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="video-facade-content"></div>
+                        </div>
+                    </div>
+                    <div class="col-4">
+                        <div class="video-facade position-relative" data-video-html='<iframe width="560" height="315" src="https://www.youtube.com/embed/4atv9KHQH18" allowfullscreen></iframe>'>
+                            <div class="video-facade-preview">
+                                <img src="https://img.youtube.com/vi/4atv9KHQH18/maxresdefault.jpg" alt="Video Facade Video Preview" class="w-100">
+                                <div class="bg-overlay">
+                                    <div class="bg-overlay-content dark">
+                                        <a href="#" class="overlay-trigger-icon size-lg op-ts op-07 bg-light text-dark" data-hover-animate="op-1" data-hover-animate-out="op-07"><i class="bi-play-fill fs-2 position-relative" style="left:1px"></i></a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="video-facade-content"></div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
         <div class="col-lg-3">
             <div class="card border-0 mb-4">
-                <div class="card-header text-center text-white bg-batik fw-bold text-uppercase">
+                <div class="card-header text-center text-white bg-batik fw-bold text-uppercase mb-2">
                     Buletin
                 </div>
                 <div id="oc-images" class="owl-carousel image-carousel carousel-widget mb-6" data-items-xs="1" data-items-sm="1" data-items-lg="1" data-items-xl="1">
