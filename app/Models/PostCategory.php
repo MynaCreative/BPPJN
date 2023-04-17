@@ -23,12 +23,4 @@ class PostCategory extends Model
         'created_by',
         'updated_by',
     ];
-
-    /**
-     * Get the route key for the model.
-     */
-    public function getRouteKeyName(): string
-    {
-        return 'uuid';
-    }
 }
