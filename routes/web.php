@@ -26,11 +26,11 @@ Route::get('/gallery', function () {
 })->name('gallery');
 
 Route::get('/profile-{page}', function ($page) {
-    return view('page.profile.'.$page);
+    return view('page.profile.' . $page);
 })->name('profile');
 
 Route::get('/organization-{page}', function ($page) {
-    return view('page.organization.'.$page);
+    return view('page.organization.' . $page);
 })->name('organization');
 
 Route::get('/publikasi', function () {
@@ -40,3 +40,11 @@ Route::get('/publikasi', function () {
 Route::get('/publikasi-single', function () {
     return view('page.publikasi.single');
 })->name('publikasi-single');
+
+Route::get('/publikasi-informasi-berkala', function () {
+    return view('page.publikasi.informasi-berkala');
+})->name('publikasi-informasi-berkala');
+
+Route::get('/publikasi-ppid-balai', function () {
+    return view('page.publikasi.ppid-balai');
+})->name('publikasi-ppid-balai');

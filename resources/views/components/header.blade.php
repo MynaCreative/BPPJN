@@ -10,7 +10,7 @@
                 </div>
                 <div class="primary-menu-trigger">
                     <button class="cnvs-hamburger" type="button" title="Open Mobile Menu">
-                    <span class="cnvs-hamburger-box"><span class="cnvs-hamburger-inner"></span></span>
+                        <span class="cnvs-hamburger-box"><span class="cnvs-hamburger-inner"></span></span>
                     </button>
                 </div>
                 <nav class="primary-menu">
@@ -44,16 +44,24 @@
                                                         </a>
                                                         <ul class="sub-menu-container" style="box-sizing: border-box;">
                                                             <li class="menu-item">
-                                                                <a class="menu-link" href="{{ route('profile', 'tugas-fungsi') }}"><div>Tugas dan Fungsi</div></a>
+                                                                <a class="menu-link" href="{{ route('profile', 'tugas-fungsi') }}">
+                                                                    <div>Tugas dan Fungsi</div>
+                                                                </a>
                                                             </li>
                                                             <li class="menu-item">
-                                                                <a class="menu-link" href="{{ route('profile', 'struktur-organisasi') }}"><div>Struktur Organisasi</div></a>
+                                                                <a class="menu-link" href="{{ route('profile', 'struktur-organisasi') }}">
+                                                                    <div>Struktur Organisasi</div>
+                                                                </a>
                                                             </li>
                                                             <li class="menu-item">
-                                                                <a class="menu-link" href="{{ route('profile', 'informasi-pejabat') }}"><div>Informasi Pejabat</div></a>
+                                                                <a class="menu-link" href="{{ route('profile', 'informasi-pejabat') }}">
+                                                                    <div>Informasi Pejabat</div>
+                                                                </a>
                                                             </li>
                                                             <li class="menu-item">
-                                                                <a class="menu-link" href="{{ route('profile', 'lokasi-kantor') }}"><div>Lokasi Kantor </div></a>
+                                                                <a class="menu-link" href="{{ route('profile', 'lokasi-kantor') }}">
+                                                                    <div>Lokasi Kantor </div>
+                                                                </a>
                                                             </li>
                                                         </ul>
                                                     </li>
@@ -65,16 +73,29 @@
                                                         </a>
                                                         <ul class="sub-menu-container" style="box-sizing: border-box;">
                                                             <li class="menu-item">
-                                                                <a class="menu-link" href="{{ route('organization', 'umum-tata-usaha') }}"><div>Bagian Umum dan Tata Usaha</div></a>
+                                                                <a class="menu-link" href="{{ route('organization', 'umum-tata-usaha') }}">
+                                                                    <div>Bagian Umum dan Tata Usaha</div>
+                                                                </a>
                                                             </li>
                                                             <li class="menu-item">
-                                                                <a class="menu-link" href="{{ route('organization', 'keterpaduan-pembangunan') }}"><div>Bidang Keterpaduan Pembangunan Infrastruktur  Jalan </div></a>
+                                                                <a class="menu-link" href="{{ route('organization', 'keterpaduan-pembangunan') }}">
+                                                                    <div>Bidang Keterpaduan Pembangunan Infrastruktur Jalan </div>
+                                                                </a>
                                                             </li>
                                                             <li class="menu-item">
-                                                                <a class="menu-link" href="{{ route('organization', 'pembangunan-jalan-jembatan') }}"><div>Bidang Pembangunan Jalan Jembatan</div></a>
+                                                                <a class="menu-link" href="{{ route('organization', 'pembangunan-jalan-jembatan') }}">
+                                                                    <div>Bidang Pembangunan Jalan Jembatan</div>
+                                                                </a>
                                                             </li>
                                                             <li class="menu-item">
-                                                                <a class="menu-link" href="{{ route('organization', 'preservasi') }}"><div>Bidang Preservasi</div></a>
+                                                                <a class="menu-link" href="{{ route('organization', 'preservasi') }}">
+                                                                    <div>Bidang Preservasi I</div>
+                                                                </a>
+                                                            </li>
+                                                            <li class="menu-item">
+                                                                <a class="menu-link" href="{{ route('organization', 'preservasi') }}">
+                                                                    <div>Bidang Preservasi II</div>
+                                                                </a>
                                                             </li>
                                                         </ul>
                                                     </li>
@@ -110,10 +131,14 @@
                                                         </a>
                                                         <ul class="sub-menu-container" style="box-sizing: border-box;">
                                                             <li class="menu-item">
-                                                                <a class="menu-link" href="{{ route('gallery') }}"><div>Foto</div></a>
+                                                                <a class="menu-link" href="{{ route('gallery') }}">
+                                                                    <div>Foto</div>
+                                                                </a>
                                                             </li>
                                                             <li class="menu-item">
-                                                                <a class="menu-link" href="https://www.youtube.com/channel/UCY0_aWLhgheVwFRpQVwBvrg"><div>Video</div></a>
+                                                                <a class="menu-link" href="https://www.youtube.com/channel/UCY0_aWLhgheVwFRpQVwBvrg">
+                                                                    <div>Video</div>
+                                                                </a>
                                                             </li>
                                                         </ul>
                                                     </li>
@@ -169,19 +194,61 @@
                             </a>
                             <ul class="sub-menu-container">
                                 <li class="menu-item">
-                                    <a class="menu-link" href="{{ route('publikasi-index') }}"><div>Berita</div></a>
+                                    <a class="menu-link" href="{{ route('publikasi-index') }}">
+                                        <div>Berita</div>
+                                    </a>
                                 </li>
                                 <li class="menu-item">
-                                    <a class="menu-link" href="https://fliphtml5.com/bookcase/zppyw"><div>Buletin</div></a>
+                                    <a class="menu-link" href="https://fliphtml5.com/bookcase/zppyw">
+                                        <div>Buletin</div>
+                                    </a>
+                                </li>
+                                <!-- <li class="menu-item">
+                                    <a class="menu-link" href="{{ route('publikasi-index') }}">
+                                        <div>Infografis</div>
+                                    </a>
                                 </li>
                                 <li class="menu-item">
-                                    <a class="menu-link" href="{{ route('publikasi-index') }}"><div>Infografis</div></a>
+                                    <a class="menu-link" href="{{ route('publikasi-index') }}">
+                                        <div>Kartun</div>
+                                    </a>
                                 </li>
                                 <li class="menu-item">
-                                    <a class="menu-link" href="{{ route('publikasi-index') }}"><div>Kartun</div></a>
+                                    <a class="menu-link" href="https://www.google.com/maps/d/u/0/embed?mid=1XSkRTxKMLw0v3DabAq302kxPmYnDa741&ll=-7.005951930188398%2C107.603394&z=9">
+                                        <div>Peta Ruas</div>
+                                    </a>
+                                </li> -->
+                            </ul>
+                        </li>
+                        <li class="menu-item {{ request()->routeIs('publikasi-index') | request()->routeIs('publikasi-single') ? 'current' : '' }}">
+                            <a class="menu-link text-uppercase" href="#">
+                                <div>Informasi Publik</div>
+                            </a>
+                            <ul class="sub-menu-container">
+                                <li class="menu-item">
+                                    <a class="menu-link" href="https://sahabat.pu.go.id">
+                                        <div>Pelayanan Terpadu</div>
+                                    </a>
                                 </li>
                                 <li class="menu-item">
-                                    <a class="menu-link" href="https://www.google.com/maps/d/u/0/embed?mid=1XSkRTxKMLw0v3DabAq302kxPmYnDa741&ll=-7.005951930188398%2C107.603394&z=9"><div>Peta Ruas</div></a>
+                                    <a class="menu-link" href="http://34.101.252.47">
+                                        <div>PPID Kementrian</div>
+                                    </a>
+                                </li>
+                                <li class="menu-item">
+                                    <a class="menu-link" href="{{ route('publikasi-ppid-balai') }}" target="_blank">
+                                        <div>PPID Balai</div>
+                                    </a>
+                                </li>
+                                <li class="menu-item">
+                                    <a class="menu-link" href="#">
+                                        <div>Permohonan Informasi</div>
+                                    </a>
+                                </li>
+                                <li class="menu-item">
+                                    <a class="menu-link" href="https://docs.google.com/forms/d/e/1FAIpQLSfFWiCkw0-hvzq4iPTE6ck2mMDYcad7VgAb2G6UssL3C_QcfA/viewform">
+                                        <div>Survey Kepuasan Masyarakat</div>
+                                    </a>
                                 </li>
                             </ul>
                         </li>
@@ -191,10 +258,14 @@
                             </a>
                             <ul class="sub-menu-container">
                                 <li class="menu-item">
-                                    <a class="menu-link" href="{{ route('gallery') }}"><div>Foto</div></a>
+                                    <a class="menu-link" href="{{ route('gallery') }}">
+                                        <div>Foto</div>
+                                    </a>
                                 </li>
                                 <li class="menu-item">
-                                    <a class="menu-link" href="https://www.youtube.com/channel/UCY0_aWLhgheVwFRpQVwBvrg"><div>Video</div></a>
+                                    <a class="menu-link" href="https://www.youtube.com/channel/UCY0_aWLhgheVwFRpQVwBvrg">
+                                        <div>Video</div>
+                                    </a>
                                 </li>
                             </ul>
                         </li>
