@@ -11,16 +11,20 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('post_categories', function (Blueprint $table) {
+        Schema::create('posts', function (Blueprint $table) {
             $table->id();
             $table->uuid('uuid');
-            // $table->foreignId('parent_id')->nullable()->constrained('post_categories');
-            $table->nestedSet();
-            $table->string('slug')->unique();
+            $table->foreignIdFor(\App\Models\PostType::class)->nullable()->constrained();
             $table->string('name');
-            $table->text('description')->nullable();
+            $table->string('slug');
+            $table->longText('body');
+            $table->string('thumbnail')->nullable();
+            $table->boolean('is_active')->default(false);
+            $table->string('meta_title')->nullable();
+            $table->string('meta_description')->nullable();
             $table->unsignedInteger('created_by')->nullable();
             $table->unsignedInteger('updated_by')->nullable();
+            $table->datetime('published_at')->nullable();
             $table->timestamps();
             $table->softDeletes();
         });
@@ -31,6 +35,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('post_categories');
+        Schema::dropIfExists('posts');
     }
 };

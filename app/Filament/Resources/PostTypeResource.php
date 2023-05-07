@@ -2,9 +2,9 @@
 
 namespace App\Filament\Resources;
 
-use App\Filament\Resources\PostCategoryResource\Pages;
-use App\Filament\Resources\PostCategoryResource\RelationManagers;
-use App\Models\PostCategory;
+use App\Filament\Resources\PostTypeResource\Pages;
+use App\Filament\Resources\PostTypeResource\RelationManagers;
+use App\Models\PostType;
 use Filament\Forms;
 use Filament\Resources\Form;
 use Filament\Resources\Resource;
@@ -15,32 +15,28 @@ use Illuminate\Database\Eloquent\SoftDeletingScope;
 use Closure;
 
 /**
- * php artisan make:filament-resource PostCategory --simple --generate --soft-deletes --view
+ * php artisan make:filament-resource PostType --simple --generate --soft-deletes --view
  */
-class PostCategoryResource extends Resource
+class PostTypeResource extends Resource
 {
-    protected static ?string $model = PostCategory::class;
+    protected static ?string $model = PostType::class;
 
-    protected static ?string $navigationIcon = 'heroicon-o-collection';
+    protected static ?string $navigationIcon = 'heroicon-o-document-text';
 
     protected static ?string $navigationGroup = 'Master';
 
     public static function form(Form $form): Form
     {
-        $options = self::treeOptions(PostCategory::all());
         return $form
             ->schema([
-                Forms\Components\Grid::make(3)
+                Forms\Components\Grid::make(2)
                     ->schema([
-                        Forms\Components\Select::make('parent_id')
-                            ->label('Parent')
-                            ->options($options),
                         Forms\Components\TextInput::make('name')
                             ->autofocus()
                             ->required()
                             ->maxLength(255)
                             ->reactive()
-                            ->unique(table: PostCategory::class, ignorable: fn ($record) => $record)
+                            ->unique(table: PostType::class, ignorable: fn ($record) => $record)
                             ->afterStateUpdated(function (Closure $set, $state) {
                                 $set('slug', str($state)->slug());
                             }),
@@ -51,21 +47,6 @@ class PostCategoryResource extends Resource
                             ->columnSpan('full'),
                     ]),
             ]);
-    }
-
-    private static function treeOptions($categories, $parent_id = null, $level = 0)
-    {
-        $options = [];
-
-        foreach ($categories as $category) {
-            if ($category->parent_id == $parent_id) {
-                $prefix = str_repeat('-', $level * 2);
-                $options[$category->id] = $prefix . $category->name;
-                $options += self::treeOptions($categories, $category->id, $level + 1);
-            }
-        }
-
-        return $options;
     }
 
     public static function table(Table $table): Table
@@ -115,7 +96,7 @@ class PostCategoryResource extends Resource
     public static function getPages(): array
     {
         return [
-            'index' => Pages\ManagePostCategories::route('/'),
+            'index' => Pages\ManagePostTypes::route('/'),
         ];
     }
 

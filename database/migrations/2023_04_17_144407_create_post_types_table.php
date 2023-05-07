@@ -11,11 +11,9 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('post_categories', function (Blueprint $table) {
+        Schema::create('post_types', function (Blueprint $table) {
             $table->id();
             $table->uuid('uuid');
-            // $table->foreignId('parent_id')->nullable()->constrained('post_categories');
-            $table->nestedSet();
             $table->string('slug')->unique();
             $table->string('name');
             $table->text('description')->nullable();
@@ -31,6 +29,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('post_categories');
+        Schema::dropIfExists('post_types');
     }
 };

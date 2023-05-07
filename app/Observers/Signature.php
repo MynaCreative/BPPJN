@@ -15,12 +15,14 @@ class Signature
      */
     public function creating($model): void
     {
-        $model->uuid = str()->uuid();
-        if (! app()->runningInConsole()) {
-            if (! isset($model->created_by)) {
+        if (!isset($model->uuid)) {
+            $model->uuid = str()->uuid();
+        }
+        if (!app()->runningInConsole()) {
+            if (!isset($model->created_by)) {
                 $model->created_by = $this->getId();
             }
-            if (! isset($model->updated_by)) {
+            if (!isset($model->updated_by)) {
                 $model->updated_by = $this->getId();
             }
         }
@@ -31,8 +33,8 @@ class Signature
      */
     public function updating($model): void
     {
-        if (! app()->runningInConsole()) {
-            if (! isset($model->updated_by)) {
+        if (!app()->runningInConsole()) {
+            if (!isset($model->updated_by)) {
                 $model->updated_by = $this->getId();
             }
         }
