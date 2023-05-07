@@ -21,7 +21,7 @@ class PostTypeResource extends Resource
 {
     protected static ?string $model = PostType::class;
 
-    protected static ?string $navigationIcon = 'heroicon-o-document-text';
+    protected static ?string $navigationIcon = 'heroicon-o-clipboard-list';
 
     protected static ?string $navigationGroup = 'Master';
 

@@ -14,7 +14,8 @@ class PostTypeSeeder extends Seeder
     public function run(): void
     {
         $collections = [
-            ['slug' => 'publication', 'name' => 'Publication'],
+            ['slug' => 'news', 'name' => 'News'],
+            ['slug' => 'video', 'name' => 'Video'],
             ['slug' => 'page', 'name' => 'Page'],
         ];
 

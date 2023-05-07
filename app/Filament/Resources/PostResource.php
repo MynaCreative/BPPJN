@@ -76,7 +76,7 @@ class PostResource extends Resource
                             ->relationship()
                             ->schema([
                                 Forms\Components\FileUpload::make('thumbnail')
-                                    ->directory('post-images')
+                                    ->directory('post-image')
                                     ->required(),
                                 Forms\Components\TextInput::make('description')
                                     ->required()
