@@ -19,6 +19,7 @@ return new class extends Migration
             $table->string('name');
             $table->string('url')->nullable();
             $table->string('thumbnail')->nullable();
+            $table->string('video')->nullable();
             $table->text('description')->nullable();
             $table->unsignedInteger('created_by')->nullable();
             $table->unsignedInteger('updated_by')->nullable();

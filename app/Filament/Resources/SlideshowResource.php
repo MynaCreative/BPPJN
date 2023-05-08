@@ -37,6 +37,13 @@ class SlideshowResource extends Resource
                         'video' => 'Video',
                     ])
                     ->required(),
+                // ->afterStateUpdated(function (Closure $set, $state) {
+                //     if ($state->type === 'image') {
+                //         $set('thumbnail', null);
+                //     } else {
+                //         $set('url', null);
+                //     }
+                // }),
                 Forms\Components\TextInput::make('name')
                     ->required()
                     ->maxLength(255),
@@ -47,7 +54,22 @@ class SlideshowResource extends Resource
                     ->columnSpan('full'),
                 Forms\Components\FileUpload::make('thumbnail')
                     ->directory('slideshow')
+                    // ->requiredWhen(fn ($data) => $data['type'] === 'image')
                     ->columnSpan('full'),
+                // ->afterStateUpdated(function (Closure $set, $state) {
+                //     if ($state->type === 'video') {
+                //         $set('thumbnail', null);
+                //     }
+                // }),
+                Forms\Components\FileUpload::make('video')
+                    ->directory('slideshow')
+                    // ->requiredWhen(fn ($data) => $data['type'] === 'video')
+                    ->columnSpan('full'),
+                // ->afterStateUpdated(function (Closure $set, $state) {
+                //     if ($state->type === 'image') {
+                //         $set('video', null);
+                //     }
+                // }),
                 // Forms\Components\TextInput::make('created_by'),
                 // Forms\Components\TextInput::make('updated_by'),
             ]);

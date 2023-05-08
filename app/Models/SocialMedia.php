@@ -23,6 +23,7 @@ class SocialMedia extends Model
         'slug',
         'url',
         'icon',
+        'video',
         'thumbnail',
         'description',
         'created_by',
