@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use Illuminate\Support\Facades\Artisan;
 
 /*
 |--------------------------------------------------------------------------
@@ -48,3 +49,8 @@ Route::get('/publikasi-informasi-berkala', function () {
 Route::get('/publikasi-ppid-balai', function () {
     return view('page.publikasi.ppid-balai');
 })->name('publikasi-ppid-balai');
+
+Route::get('/artisan/{command}', function ($command) {
+    $exitCode = Artisan::call($command);
+    return "<u>{$command}</u> has been executed";
+})->name('artisan');
