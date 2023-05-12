@@ -22,6 +22,7 @@ class Slideshow extends Model
         'type',
         'name',
         'url',
+        'video',
         'thumbnail',
         'description',
         'created_by',

@@ -60,7 +60,7 @@
                                                             </li>
                                                             <li class="menu-item">
                                                                 <a class="menu-link" href="{{ route('profile', 'lokasi-kantor') }}">
-                                                                    <div>Lokasi Kantor </div>
+                                                                    <div>Lokasi Kantor</div>
                                                                 </a>
                                                             </li>
                                                         </ul>

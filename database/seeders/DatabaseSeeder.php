@@ -19,6 +19,13 @@ class DatabaseSeeder extends Seeder
             $this->call(PostCategorySeeder::class);
             $this->call(SlideshowSeeder::class);
             $this->call(SocialMediaSeeder::class);
+            $this->call(InfographicSeeder::class);
+            $this->call(BulletinSeeder::class);
+            $this->call(VideoSeeder::class);
+            $this->call(AboutSeeder::class);
+            $this->call(OrganizationSeeder::class);
+            $this->call(PageSeeder::class);
+            $this->call(NewsSeeder::class);
         });
     }
 }

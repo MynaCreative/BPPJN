@@ -18,9 +18,9 @@ class SlideshowResource extends Resource
 {
     protected static ?string $model = Slideshow::class;
 
-    protected static ?string $navigationIcon = 'heroicon-o-photograph';
+    protected static ?string $navigationIcon = 'heroicon-o-credit-card';
 
-    protected static ?string $navigationGroup = 'Content';
+    protected static ?string $navigationGroup = 'Media';
 
     public static function form(Form $form): Form
     {
@@ -55,7 +55,8 @@ class SlideshowResource extends Resource
                 Forms\Components\FileUpload::make('thumbnail')
                     ->directory('slideshow')
                     // ->requiredWhen(fn ($data) => $data['type'] === 'image')
-                    ->columnSpan('full'),
+                    ->columnSpan('full')
+                    ->maxSize(1024 * 10),
                 // ->afterStateUpdated(function (Closure $set, $state) {
                 //     if ($state->type === 'video') {
                 //         $set('thumbnail', null);
@@ -64,7 +65,8 @@ class SlideshowResource extends Resource
                 Forms\Components\FileUpload::make('video')
                     ->directory('slideshow')
                     // ->requiredWhen(fn ($data) => $data['type'] === 'video')
-                    ->columnSpan('full'),
+                    ->columnSpan('full')
+                    ->maxSize(1024 * 10),
                 // ->afterStateUpdated(function (Closure $set, $state) {
                 //     if ($state->type === 'image') {
                 //         $set('video', null);
@@ -83,16 +85,18 @@ class SlideshowResource extends Resource
                 // Tables\Columns\TextColumn::make('uuid'),
                 // Tables\Columns\TextColumn::make('sequence'),
                 Tables\Columns\TextColumn::make('type'),
-                Tables\Columns\TextColumn::make('name'),
-                Tables\Columns\TextColumn::make('url'),
+                Tables\Columns\TextColumn::make('name')->words(5, '...'),
+                Tables\Columns\TextColumn::make('url')
+                    ->toggleable(isToggledHiddenByDefault: true),
                 // Tables\Columns\TextColumn::make('description'),
                 Tables\Columns\TextColumn::make('created_at')
                     ->date(),
                 Tables\Columns\TextColumn::make('updated_at')
+                    ->toggleable(isToggledHiddenByDefault: true)
                     ->date(),
                 Tables\Columns\TextColumn::make('createdUser.name')
+                    ->toggleable(isToggledHiddenByDefault: true)
                     ->label('Created By')
-                    ->toggleable()
                     ->sortable(),
                 // Tables\Columns\TextColumn::make('deleted_at')
                 //     ->dateTime(),

@@ -40,11 +40,7 @@
                                 </div>
                                 <div class="mb-3">
                                     <strong>Media Sosial</strong><br><br>
-                                    <a href="#" target="_blank" style="margin-right: 5px;"><img src="/images/social/fb.png" alt="Image" style="max-width: 12%;"></a>
-									<a href="#" target="_blank" style="margin-right: 5px;"><img src="/images/social/yt.png" alt="Image" style="max-width: 12%;"></a>
-									<a href="#" target="_blank" style="margin-right: 5px;"><img src="/images/social/twitter.png" alt="Image" style="max-width: 12%;"></a>
-									<a href="#" target="_blank" style="margin-right: 5px;"><img src="/images/social/ig.png" alt="Image" style="max-width: 12%;"></a>
-									<a href="#" target="_blank" style="margin-right: 5px;"><img src="/images/social/wa.png" alt="Image" style="max-width: 12%;"></a>
+                                    <x-social-media />
                                 </div>
                             </div>
                             <div class="col-md-4">
@@ -71,9 +67,9 @@
                                             <th scope="col">:</th>
                                             <th scope="col" class="text-end">666.972</th>
                                         </tr>
-                                            <th scope="col">Total Pengunjung</th>
-                                            <th scope="col">:</th>
-                                            <th scope="col" class="text-end">56.020</th>
+                                        <th scope="col">Total Pengunjung</th>
+                                        <th scope="col">:</th>
+                                        <th scope="col" class="text-end">56.020</th>
                                         </tr>
                                     </thead>
                                 </table>
@@ -85,14 +81,14 @@
         </div>
     </div>
     <div id="copyrights" class="bg-white p-2">
-		<div class="container">
-			<div class="row col-mb-10">
-				<div class="col-md-12 text-black">
-					<center>Hak Cipta © 2023 | Balai Besar Pelaksanaan Jalan Nasional DKI Jakarta - Jawa Barat <br></center>
-				</div>
-			</div>
-		</div>
-	</div>
+        <div class="container">
+            <div class="row col-mb-10">
+                <div class="col-md-12 text-black">
+                    <center>Hak Cipta © 2023 | Balai Besar Pelaksanaan Jalan Nasional DKI Jakarta - Jawa Barat <br></center>
+                </div>
+            </div>
+        </div>
+    </div>
     <!-- <div id="copyrights">
         <div class="container">
             <div class="row col-mb-30">

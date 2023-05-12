@@ -20,7 +20,7 @@ class SocialMediaResource extends Resource
 
     protected static ?string $navigationIcon = 'heroicon-o-share';
 
-    protected static ?string $navigationGroup = 'Content';
+    protected static ?string $navigationGroup = 'Master';
 
     public static function form(Form $form): Form
     {

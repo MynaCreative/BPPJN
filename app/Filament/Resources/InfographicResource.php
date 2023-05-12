@@ -59,7 +59,7 @@ class InfographicResource extends Resource
             ->columns([
                 // Tables\Columns\TextColumn::make('uuid'),
                 Tables\Columns\ImageColumn::make('thumbnail'),
-                Tables\Columns\TextColumn::make('name'),
+                Tables\Columns\TextColumn::make('name')->words(5, '...'),
                 // Tables\Columns\TextColumn::make('slug'),
                 // Tables\Columns\TextColumn::make('url'),
                 // Tables\Columns\TextColumn::make('description'),

@@ -3,8 +3,9 @@
 namespace Database\Seeders;
 
 use Illuminate\Database\Console\Seeds\WithoutModelEvents;
-use App\Models\SocialMedia as Model;
 use Illuminate\Database\Seeder;
+
+use App\Models\SocialMedia as Model;
 
 class SocialMediaSeeder extends Seeder
 {
@@ -14,11 +15,11 @@ class SocialMediaSeeder extends Seeder
     public function run(): void
     {
         $collections = [
-            ['slug' => 'facebook', 'name' => 'Facebook'],
-            ['slug' => 'youtube', 'name' => 'Youtube'],
-            ['slug' => 'twitter', 'name' => 'Twitter'],
-            ['slug' => 'instagram', 'name' => 'Instagram'],
-            ['slug' => 'whatsapp', 'name' => 'WhatsApp'],
+            ['slug' => 'facebook', 'url' => '#', 'name' => 'Facebook', 'thumbnail' => '/images/social/fb.png'],
+            ['slug' => 'youtube', 'url' => '#', 'name' => 'Youtube', 'thumbnail' => '/images/social/yt.png'],
+            ['slug' => 'twitter', 'url' => '#', 'name' => 'Twitter', 'thumbnail' => '/images/social/twitter.png'],
+            ['slug' => 'instagram', 'url' => '#', 'name' => 'Instagram', 'thumbnail' => '/images/social/ig.png'],
+            ['slug' => 'whatsapp', 'url' => '#', 'name' => 'WhatsApp', 'thumbnail' => '/images/social/wa.png'],
         ];
 
         collect($collections)->each(fn ($item) => Model::create($item));

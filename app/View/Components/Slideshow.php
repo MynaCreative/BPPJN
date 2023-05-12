@@ -6,7 +6,7 @@ use Closure;
 use Illuminate\Contracts\View\View;
 use Illuminate\View\Component;
 
-use App\Models\Slideshow as ModelSlideshow;
+use App\Models\Slideshow as Model;
 
 class Slideshow extends Component
 {
@@ -17,7 +17,7 @@ class Slideshow extends Component
      */
     public function __construct()
     {
-        $this->collections = ModelSlideshow::orderBy('sequence')->get();
+        $this->collections = Model::orderBy('sequence')->get();
     }
 
     /**
@@ -26,7 +26,7 @@ class Slideshow extends Component
     public function render(): View|Closure|string
     {
         return view('components.slideshow', [
-            'test' => 'hei'
+            'collections' => $this->collections
         ]);
     }
 }

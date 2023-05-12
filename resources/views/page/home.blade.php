@@ -3,7 +3,7 @@
 @section('title', 'Homepage')
 
 @section('featured')
-@include('components.slider')
+<x-slideshow />
 <div id="page-menu" class="">
     <div id="page-menu-wrap">
         <div class="container">
@@ -187,12 +187,7 @@
                     Infografis
                 </div>
                 <div id="oc-images" class="owl-carousel image-carousel carousel-widget mb-6" data-items-xs="1" data-items-sm="1" data-items-lg="1" data-items-xl="1">
-                    <div class="oc-item">
-                        <a href="{{ route('publikasi-single') }}"><img src="/images/infografis/1.jpg" alt="Image 1"></a>
-                    </div>
-                    <div class="oc-item">
-                        <a href="{{ route('publikasi-single') }}"><img src="/images/infografis/2.jpg" alt="Image 2"></a>
-                    </div>
+                    <x-infographic />
                 </div>
             </div>
         </div>
@@ -263,14 +258,11 @@
                     Buletin
                 </div>
                 <div id="oc-images" class="owl-carousel image-carousel carousel-widget mb-6" data-items-xs="1" data-items-sm="1" data-items-lg="1" data-items-xl="1">
-                    @for ($i = 1; $i <= 12; $i++) <div class="oc-item">
-                        <a href="https://online.fliphtml5.com/jstpy/acjv/"><img src="/images/buletin/{{$i}}.jpg" alt="Image {{$i}}"></a>
+                    <x-bulletin />
                 </div>
-                @endfor
             </div>
         </div>
     </div>
-</div>
 </div>
 
 @production

@@ -3,7 +3,7 @@
         <div class="swiper-container swiper-parent">
             <div class="swiper-wrapper">
                 <div class="swiper-slide dark">
-                <div class="container">
+                    <div class="container">
                         <div class="slider-caption slider-caption-center">
                             <h2 data-animate="fadeInUp">SELAMAT DATANG DI</h2>
                             <h2 data-animate="fadeInUp">

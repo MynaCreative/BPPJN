@@ -4,7 +4,10 @@ namespace App\Filament\Resources;
 
 use App\Filament\Resources\PostResource\Pages;
 use App\Filament\Resources\PostResource\RelationManagers;
+use Mohamedsabil83\FilamentFormsTinyeditor\Components\TinyEditor;
 use App\Models\Post;
+use App\Models\PostCategory;
+use App\Models\PostType;
 use Filament\Forms;
 use Filament\Resources\Form;
 use Filament\Resources\Resource;
@@ -24,6 +27,7 @@ class PostResource extends Resource
 
     public static function form(Form $form): Form
     {
+        $options = self::treeOptions(PostCategory::all());
         return $form
             ->schema([
                 Forms\Components\Card::make()
@@ -47,14 +51,15 @@ class PostResource extends Resource
                                     ->required()
                                     ->relationship('postType', 'name'),
                                 Forms\Components\DatePicker::make('published_at'),
-                                Forms\Components\RichEditor::make('body')
+                                TinyEditor::make('body')->profile('content')
                                     ->required()
                                     ->columnSpan('full'),
                                 Forms\Components\Select::make('postCategories')
                                     ->multiple()
                                     ->searchable()
                                     ->preload()
-                                    ->relationship('postCategories', 'name'),
+                                    // ->relationship('postCategories', 'name'),
+                                    ->options($options),
                                 Forms\Components\Toggle::make('is_active')
                                     ->inline(false)
                                     ->default(true)
@@ -83,19 +88,36 @@ class PostResource extends Resource
                             ])
                             ->orderable('sequence')
                             ->collapsible()
-                            ->defaultItems(1)
+                            ->defaultItems(0)
                             ->columns(2)
                     ])->columnSpan(12),
             ])->columns(12);
     }
 
+    private static function treeOptions($categories, $parent_id = null, $level = 0)
+    {
+        $options = [];
+
+        foreach ($categories as $category) {
+            if ($category->parent_id == $parent_id) {
+                $prefix = str_repeat('-', $level * 2);
+                $options[$category->id] = $prefix . $category->name;
+                $options += self::treeOptions($categories, $category->id, $level + 1);
+            }
+        }
+
+        return $options;
+    }
+
     public static function table(Table $table): Table
     {
+        $postTypes = PostType::pluck('name', 'name');
         return $table
             ->columns([
                 Tables\Columns\ImageColumn::make('thumbnail'),
                 Tables\Columns\TextColumn::make('postType.name')->toggleable(),
                 Tables\Columns\TextColumn::make('name')
+                    ->words(5, '...')
                     ->searchable(['name', 'body'])
                     ->toggleable()
                     ->sortable(),
@@ -105,6 +127,7 @@ class PostResource extends Resource
                 // Tables\Columns\TextColumn::make('meta_title'),
                 // Tables\Columns\TextColumn::make('meta_description'),
                 Tables\Columns\TextColumn::make('published_at')
+                    ->toggleable(isToggledHiddenByDefault: true)
                     ->sortable()
                     ->date(),
                 Tables\Columns\TextColumn::make('created_at')
@@ -113,8 +136,8 @@ class PostResource extends Resource
                     ->toggleable(isToggledHiddenByDefault: true)
                     ->date(),
                 Tables\Columns\TextColumn::make('createdUser.name')
+                    ->toggleable(isToggledHiddenByDefault: true)
                     ->label('Created By')
-                    ->toggleable()
                     ->sortable(),
                 Tables\Columns\IconColumn::make('is_active')
                     ->sortable()
@@ -122,6 +145,27 @@ class PostResource extends Resource
             ])
             ->filters([
                 Tables\Filters\TrashedFilter::make(),
+                Tables\Filters\Filter::make('created_at')
+                    ->form([
+                        Forms\Components\Select::make('post_type')
+                            ->required()
+                            ->options($postTypes),
+                    ])
+                    ->query(function (Builder $query, array $data): Builder {
+                        return $query
+                            ->when(
+                                $data['post_type'],
+                                fn (Builder $query, $value): Builder => $query->whereRelation('postType', 'name', $value),
+                            );
+                    })
+                    ->indicateUsing(function (array $data): array {
+                        $indicators = [];
+                        if ($data['post_type'] ?? null) {
+                            $indicators['post_type'] = 'Post Type : ' . $data['post_type'];
+                        }
+
+                        return $indicators;
+                    }),
             ])
             ->actions([
                 Tables\Actions\ViewAction::make(),
