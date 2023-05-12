@@ -86,7 +86,7 @@ class GalleryResource extends Resource
     {
         return $table
             ->columns([
-                Tables\Columns\ImageColumn::make('thumbnail'),
+                // Tables\Columns\ImageColumn::make('thumbnail'),
                 Tables\Columns\TextColumn::make('name')
                     ->words(5, '...')
                     ->searchable(['name', 'body'])

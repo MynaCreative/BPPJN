@@ -2,6 +2,9 @@
 
 use Illuminate\Support\Facades\Route;
 use Illuminate\Support\Facades\Artisan;
+use App\Http\Controllers\PostController;
+use App\Http\Controllers\GalleryController;
+use App\Http\Controllers\PersonController;
 
 /*
 |--------------------------------------------------------------------------
@@ -17,6 +20,11 @@ use Illuminate\Support\Facades\Artisan;
 Route::get('/', function () {
     return view('page.home');
 })->name('home');
+
+Route::get('/posts', [PostController::class, 'index'])->name('posts.index');
+Route::get('/galleries', [GalleryController::class, 'index'])->name('galleries.index');
+Route::get('/persons', [PersonController::class, 'index'])->name('persons.index');
+Route::get('/posts/{slug}', [PostController::class, 'show'])->name('posts.show');
 
 Route::get('/contact', function () {
     return view('page.contact');

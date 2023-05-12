@@ -2,9 +2,9 @@
 
 namespace App\Filament\Resources;
 
-use App\Filament\Resources\SocialMediaResource\Pages;
-use App\Filament\Resources\SocialMediaResource\RelationManagers;
-use App\Models\SocialMedia;
+use App\Filament\Resources\PersonResource\Pages;
+use App\Filament\Resources\PersonResource\RelationManagers;
+use App\Models\Person;
 use Filament\Forms;
 use Filament\Resources\Form;
 use Filament\Resources\Resource;
@@ -14,13 +14,13 @@ use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Database\Eloquent\SoftDeletingScope;
 use Closure;
 
-class SocialMediaResource extends Resource
+class PersonResource extends Resource
 {
-    protected static ?string $model = SocialMedia::class;
+    protected static ?string $model = Person::class;
 
-    protected static ?string $navigationIcon = 'heroicon-o-share';
+    protected static ?string $navigationIcon = 'heroicon-o-academic-cap';
 
-    protected static ?string $navigationGroup = 'Master';
+    protected static ?string $navigationGroup = 'Media';
 
     public static function form(Form $form): Form
     {
@@ -36,22 +36,17 @@ class SocialMediaResource extends Resource
                     ->required()
                     ->maxLength(255)
                     ->reactive()
-                    ->unique(table: SocialMedia::class, ignorable: fn ($record) => $record)
+                    ->unique(table: Person::class, ignorable: fn ($record) => $record)
                     ->afterStateUpdated(function (Closure $set, $state) {
                         $set('slug', str($state)->slug());
                     }),
                 Forms\Components\TextInput::make('slug')
                     ->required()
                     ->maxLength(255),
-                Forms\Components\TextInput::make('url')
-                    ->maxLength(255),
-                Forms\Components\TextInput::make('icon')
-                    ->maxLength(255),
-
                 Forms\Components\RichEditor::make('description')
                     ->columnSpan('full'),
                 Forms\Components\FileUpload::make('thumbnail')
-                    ->directory('social-media')
+                    ->directory('person')
                     ->columnSpan('full'),
                 // Forms\Components\TextInput::make('created_by'),
                 // Forms\Components\TextInput::make('updated_by'),
@@ -62,21 +57,21 @@ class SocialMediaResource extends Resource
     {
         return $table
             ->columns([
-                Tables\Columns\ImageColumn::make('thumbnail'),
+                Tables\Columns\ImageColumn::make('thumbnail')->circular(),
                 // Tables\Columns\TextColumn::make('uuid'),
                 // Tables\Columns\TextColumn::make('sequence'),
                 Tables\Columns\TextColumn::make('name'),
                 // Tables\Columns\TextColumn::make('slug'),
-                Tables\Columns\TextColumn::make('url')
-                    ->toggleable(isToggledHiddenByDefault: true),
-                Tables\Columns\TextColumn::make('icon')
-                    ->toggleable(isToggledHiddenByDefault: true),
-                // Tables\Columns\TextColumn::make('description'),
+                Tables\Columns\TextColumn::make('description')
+                    ->toggleable()
+                    ->html(),
                 // Tables\Columns\TextColumn::make('created_by'),
                 // Tables\Columns\TextColumn::make('updated_by'),
                 Tables\Columns\TextColumn::make('created_at')
+                    ->toggleable(isToggledHiddenByDefault: true)
                     ->date(),
                 Tables\Columns\TextColumn::make('updated_at')
+                    ->toggleable(isToggledHiddenByDefault: true)
                     ->date(),
                 Tables\Columns\TextColumn::make('createdUser.name')
                     ->label('Created By')
@@ -106,7 +101,7 @@ class SocialMediaResource extends Resource
     public static function getPages(): array
     {
         return [
-            'index' => Pages\ManageSocialMedia::route('/'),
+            'index' => Pages\ManagePeople::route('/'),
         ];
     }
 

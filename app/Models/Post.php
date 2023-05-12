@@ -40,6 +40,7 @@ class Post extends Model
      * @var array
      */
     protected $casts = [
+        'published_at' => 'datetime',
         'is_active' => 'boolean',
     ];
 

@@ -58,8 +58,8 @@ class PostResource extends Resource
                                     ->multiple()
                                     ->searchable()
                                     ->preload()
-                                    // ->relationship('postCategories', 'name'),
-                                    ->options($options),
+                                    ->relationship('postCategories', 'name'),
+                                // ->options($options),
                                 Forms\Components\Toggle::make('is_active')
                                     ->inline(false)
                                     ->default(true)

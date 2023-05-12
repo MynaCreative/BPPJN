@@ -27,78 +27,7 @@
 @section('content')
 
 <div class="container">
-    <div class="fancy-title title-border title-center text-uppercase">
-        <h3 class="fw-bold" style="color:var(--cnvs-themecolor)">Berita Terbaru</h3>
-    </div>
-    <div class="row posts-md col-mb-30">
-        <div class="col-lg-3 col-md-6">
-            <div class="entry">
-                <div class="entry-image">
-                    <a href="{{ route('publikasi-single') }}"><img src="/images/post/1.jpg" alt="Image" class="rounded"></a>
-                </div>
-                <div class="entry-title title-xs text-transform-none px-2">
-                    <h3><a href="{{ route('publikasi-single') }}">Kementerian PUPR Pastikan Jalan Nasional Sepanjang 262Km di Yogyakarta Siap Sambut Momentum Mudik Lebaran 2023</a></h3>
-                </div>
-                <div class="entry-meta px-2">
-                    <ul>
-                        <li><i class="uil uil-schedule"></i> 13th Jun 2023</li>
-                        <li><a href="{{ route('publikasi-single') }}"><i class="uil uil-eye"></i> 53</a></li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-        <div class="col-lg-3 col-md-6">
-            <div class="entry">
-                <div class="entry-image">
-                    <a href="{{ route('publikasi-single') }}"><img src="/images/post/2.jpg" alt="Image" class="rounded"></a>
-                </div>
-                <div class="entry-title title-xs text-transform-none px-2">
-                    <h3><a href="{{ route('publikasi-single') }}">Tingkatkan Konektivitas dan Distribusi Logistik, Kementerian PUPR Rampungkan Penggantian 3 Jembatan di Denpasar</a></h3>
-                </div>
-                <div class="entry-meta px-2">
-                    <ul>
-                        <li><i class="uil uil-schedule"></i> 24th Feb 2023</li>
-                        <li><a href="{{ route('publikasi-single') }}"><i class="uil uil-eye"></i> 17</a></li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-        <div class="col-lg-3 col-md-6">
-            <div class="entry">
-                <div class="entry-image">
-                    <a href="{{ route('publikasi-single') }}"><img src="/images/post/1.jpg" alt="Image" class="rounded"></a>
-                </div>
-                <div class="entry-title title-xs text-transform-none px-2">
-                    <h3><a href="{{ route('publikasi-single') }}">Target Tersambung 3.196 Km Pada Akhir Tahun 2024, PUPR Komitmen Wujudkan Penyelenggaraan Jalan Tol yang Berkelanjutan</a></h3>
-                </div>
-                <div class="entry-meta px-2">
-                    <ul>
-                        <li><i class="uil uil-schedule"></i> 30th Dec 2023</li>
-                        <li><a href="{{ route('publikasi-single') }}"><i class="uil uil-eye"></i> 13</a></li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-        <div class="col-lg-3 col-md-6">
-            <div class="entry">
-                <div class="entry-image">
-                    <a href="{{ route('publikasi-single') }}"><img src="/images/post/2.jpg" alt="Image" class="rounded"></a>
-                </div>
-                <div class="entry-title title-xs text-transform-none px-2">
-                    <h3><a href="{{ route('publikasi-single') }}">Kementerian PUPR Pastikan Jalan Nasional Sepanjang 262Km di Yogyakarta Siap Sambut Momentum Mudik Lebaran 2023</a></h3>
-                </div>
-                <div class="entry-meta px-2">
-                    <ul>
-                        <li><i class="uil uil-schedule"></i> 13th Jun 2023</li>
-                        <li><a href="{{ route('publikasi-single') }}"><i class="uil uil-eye"></i> 53</a></li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class="text-center mt-4">
-        <a href="{{ route('publikasi-index') }}" class="button button-border button-small button-red button-circle text-uppercase">Index Berita <i class="fa-sharp fa-solid fa-chevron-right"></i></a>
-    </div>
+    <x-post />
 </div>
 
 <div class="container">
@@ -109,7 +38,7 @@
         <article class="portfolio-item col-md-4 col-lg-3 pf-media pf-icons">
             <div class="grid-inner">
                 <div class="portfolio-image">
-                    <a href="{{ route('publikasi-single') }}">
+                    <a href="{{ route('posts.show','maklumat-pelayanan') }}">
                         <img src="/images/service/1.jpg" alt="Open Imagination" style="filter:sepia(100) hue-rotate(310deg) saturate(4)">
                     </a>
                     <!-- <div class="bg-overlay">
@@ -121,43 +50,43 @@
 					</div> -->
                 </div>
                 <div class="portfolio-desc text-center ">
-                    <h3><a href="{{ route('publikasi-single') }}" style="color:var(--cnvs-themecolor)" class="fw-bold text-uppercase">Lihat Detail</a></h3>
+                    <h3><a href="{{ route('posts.show','maklumat-pelayanan') }}" style="color:var(--cnvs-themecolor)" class="fw-bold text-uppercase">Lihat Detail</a></h3>
                 </div>
             </div>
         </article>
         <article class="portfolio-item col-md-4 col-lg-3 pf-illustrations">
             <div class="grid-inner">
                 <div class="portfolio-image">
-                    <a href="{{ route('publikasi-informasi-berkala') }}">
+                    <a href="{{ route('posts.show','informasi-berkala') }}">
                         <img src="/images/service/2.jpg" alt="Locked Steel Gate" style="filter:sepia(100) hue-rotate(310deg) saturate(4)">
                     </a>
                 </div>
                 <div class="portfolio-desc text-center ">
-                    <h3><a href="{{ route('publikasi-informasi-berkala') }}" style="color:var(--cnvs-themecolor)" class="fw-bold text-uppercase">Lihat Detail</a></h3>
+                    <h3><a href="{{ route('posts.show','informasi-berkala') }}" style="color:var(--cnvs-themecolor)" class="fw-bold text-uppercase">Lihat Detail</a></h3>
                 </div>
             </div>
         </article>
         <article class="portfolio-item col-md-4 col-lg-3 pf-graphics pf-uielements">
             <div class="grid-inner">
                 <div class="portfolio-image">
-                    <a href="{{ route('publikasi-single') }}">
+                    <a href="{{ route('posts.show','informasi-setiap-saat') }}">
                         <img src="/images/service/3.jpg" alt="Mac Sunglasses" style="filter:sepia(100) hue-rotate(310deg) saturate(4)">
                     </a>
                 </div>
                 <div class="portfolio-desc text-center ">
-                    <h3><a href="{{ route('publikasi-single') }}" style="color:var(--cnvs-themecolor)" class="fw-bold text-uppercase">Lihat Detail</a></h3>
+                    <h3><a href="{{ route('posts.show','informasi-setiap-saat') }}" style="color:var(--cnvs-themecolor)" class="fw-bold text-uppercase">Lihat Detail</a></h3>
                 </div>
             </div>
         </article>
         <article class="portfolio-item col-md-4 col-lg-3 pf-icons pf-illustrations">
             <div class="grid-inner">
                 <div class="portfolio-image">
-                    <a href="{{ route('publikasi-single') }}">
+                    <a href="{{ route('posts.show','informasi-serta-merta') }}">
                         <img src="/images/service/4.jpg" alt="Open Imagination" style="filter:sepia(100) hue-rotate(310deg) saturate(4)">
                     </a>
                 </div>
                 <div class="portfolio-desc text-center ">
-                    <h3><a href="{{ route('publikasi-single') }}" style="color:var(--cnvs-themecolor)" class="fw-bold text-uppercase">Lihat Detail</a></h3>
+                    <h3><a href="{{ route('posts.show','informasi-serta-merta') }}" style="color:var(--cnvs-themecolor)" class="fw-bold text-uppercase">Lihat Detail</a></h3>
                 </div>
             </div>
         </article>
@@ -169,9 +98,9 @@
         <h3 class="fw-bold" style="color:var(--cnvs-themecolor)">Pelayanan Publik</h3>
     </div>
     <div id="oc-clients" class="owl-carousel image-carousel carousel-widget" data-margin="60" data-loop="true" data-nav="false" data-autoplay="5000" data-pagi="false" data-items-xs="2" data-items-sm="3" data-items-md="4" data-items-lg="4" data-items-xl="4">
-        <div class="oc-item"><a href="{{ route('publikasi-single') }}"><img src="/images/link/salira.png" alt="Clients"></a></div>
-        <div class="oc-item"><a href="{{ route('publikasi-single') }}"><img src="/images/link/oksip.png" alt="Clients"></a></div>
-        <div class="oc-item"><a href="{{ route('publikasi-single') }}"><img src="/images/link/callcenter.png" alt="Clients"></a></div>
+        <div class="oc-item"><a href="https://sahabat.pu.go.id/pelayanan/deskripsi/3/kontak"><img src="/images/link/salira.png" alt="Clients"></a></div>
+        <div class="oc-item"><a href="https://oksip.pu.go.id/"><img src="/images/link/oksip.png" alt="Clients"></a></div>
+        <div class="oc-item"><a href="https://wa.me/+628119225246"><img src="/images/link/callcenter.png" alt="Clients"></a></div>
         <div class="oc-item"><a href="https://www.google.com/maps/d/u/0/embed?mid=1XSkRTxKMLw0v3DabAq302kxPmYnDa741&ll=-7.005951930188423%2C107.603394&z=9"><img src="/images/link/peta.png" alt="Clients"></a></div>
     </div>
 </div>
@@ -197,58 +126,7 @@
                     Video
                 </div>
                 <div class="row g-2">
-                    <div class="col-12">
-                        <div class="video-facade position-relative" data-video-html='<iframe width="560" height="315" src="https://www.youtube.com/embed/M_7jf0_8o8I" allowfullscreen></iframe>'>
-                            <div class="video-facade-preview">
-                                <img src="https://img.youtube.com/vi/M_7jf0_8o8I/maxresdefault.jpg" alt="Video Facade Video Preview" class="w-100">
-                                <div class="bg-overlay">
-                                    <div class="bg-overlay-content dark">
-                                        <a href="#" class="overlay-trigger-icon size-lg op-ts op-07 bg-light text-dark" data-hover-animate="op-1" data-hover-animate-out="op-07"><i class="bi-play-fill fs-2 position-relative" style="left:1px"></i></a>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="video-facade-content"></div>
-                        </div>
-                    </div>
-                    <div class="col-4">
-                        <div class="video-facade position-relative" data-video-html='<iframe width="560" height="315" src="https://www.youtube.com/embed/E-PWNawxL4U" allowfullscreen></iframe>'>
-                            <div class="video-facade-preview">
-                                <img src="https://img.youtube.com/vi/E-PWNawxL4U/maxresdefault.jpg" alt="Video Facade Video Preview" class="w-100">
-                                <div class="bg-overlay">
-                                    <div class="bg-overlay-content dark">
-                                        <a href="#" class="overlay-trigger-icon size-lg op-ts op-07 bg-light text-dark" data-hover-animate="op-1" data-hover-animate-out="op-07"><i class="bi-play-fill fs-2 position-relative" style="left:1px"></i></a>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="video-facade-content"></div>
-                        </div>
-                    </div>
-                    <div class="col-4">
-                        <div class="video-facade position-relative" data-video-html='<iframe width="560" height="315" src="https://www.youtube.com/embed/7GaKdV1l3xw" allowfullscreen></iframe>'>
-                            <div class="video-facade-preview">
-                                <img src="https://img.youtube.com/vi/7GaKdV1l3xw/maxresdefault.jpg" alt="Video Facade Video Preview" class="w-100">
-                                <div class="bg-overlay">
-                                    <div class="bg-overlay-content dark">
-                                        <a href="#" class="overlay-trigger-icon size-lg op-ts op-07 bg-light text-dark" data-hover-animate="op-1" data-hover-animate-out="op-07"><i class="bi-play-fill fs-2 position-relative" style="left:1px"></i></a>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="video-facade-content"></div>
-                        </div>
-                    </div>
-                    <div class="col-4">
-                        <div class="video-facade position-relative" data-video-html='<iframe width="560" height="315" src="https://www.youtube.com/embed/4atv9KHQH18" allowfullscreen></iframe>'>
-                            <div class="video-facade-preview">
-                                <img src="https://img.youtube.com/vi/4atv9KHQH18/maxresdefault.jpg" alt="Video Facade Video Preview" class="w-100">
-                                <div class="bg-overlay">
-                                    <div class="bg-overlay-content dark">
-                                        <a href="#" class="overlay-trigger-icon size-lg op-ts op-07 bg-light text-dark" data-hover-animate="op-1" data-hover-animate-out="op-07"><i class="bi-play-fill fs-2 position-relative" style="left:1px"></i></a>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="video-facade-content"></div>
-                        </div>
-                    </div>
+                    <x-youtube />
                 </div>
             </div>
         </div>

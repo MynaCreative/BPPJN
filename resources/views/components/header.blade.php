@@ -38,67 +38,10 @@
                                         <div class="container">
                                             <div class="row">
                                                 <ul class="sub-menu-container mega-menu-column col-lg-3" style="box-sizing: border-box;">
-                                                    <li class="menu-item mega-menu-title sub-menu {{ request()->routeIs('profile') ? 'current' : '' }}">
-                                                        <a class="menu-link fw-bold" href="#">
-                                                            <div>Tentang Kami</div>
-                                                        </a>
-                                                        <ul class="sub-menu-container" style="box-sizing: border-box;">
-                                                            <li class="menu-item">
-                                                                <a class="menu-link" href="{{ route('profile', 'tugas-fungsi') }}">
-                                                                    <div>Tugas dan Fungsi</div>
-                                                                </a>
-                                                            </li>
-                                                            <li class="menu-item">
-                                                                <a class="menu-link" href="{{ route('profile', 'struktur-organisasi') }}">
-                                                                    <div>Struktur Organisasi</div>
-                                                                </a>
-                                                            </li>
-                                                            <li class="menu-item">
-                                                                <a class="menu-link" href="{{ route('profile', 'informasi-pejabat') }}">
-                                                                    <div>Informasi Pejabat</div>
-                                                                </a>
-                                                            </li>
-                                                            <li class="menu-item">
-                                                                <a class="menu-link" href="{{ route('profile', 'lokasi-kantor') }}">
-                                                                    <div>Lokasi Kantor</div>
-                                                                </a>
-                                                            </li>
-                                                        </ul>
-                                                    </li>
+                                                    <x-menu-about />
                                                 </ul>
                                                 <ul class="sub-menu-container mega-menu-column col-lg-6" style="box-sizing: border-box;">
-                                                    <li class="menu-item mega-menu-title sub-menu {{ request()->routeIs('organization') ? 'current' : '' }}">
-                                                        <a class="menu-link fw-bold" href="#">
-                                                            <div>Organisasi</div>
-                                                        </a>
-                                                        <ul class="sub-menu-container" style="box-sizing: border-box;">
-                                                            <li class="menu-item">
-                                                                <a class="menu-link" href="{{ route('organization', 'umum-tata-usaha') }}">
-                                                                    <div>Bagian Umum dan Tata Usaha</div>
-                                                                </a>
-                                                            </li>
-                                                            <li class="menu-item">
-                                                                <a class="menu-link" href="{{ route('organization', 'keterpaduan-pembangunan') }}">
-                                                                    <div>Bidang Keterpaduan Pembangunan Infrastruktur Jalan </div>
-                                                                </a>
-                                                            </li>
-                                                            <li class="menu-item">
-                                                                <a class="menu-link" href="{{ route('organization', 'pembangunan-jalan-jembatan') }}">
-                                                                    <div>Bidang Pembangunan Jalan Jembatan</div>
-                                                                </a>
-                                                            </li>
-                                                            <li class="menu-item">
-                                                                <a class="menu-link" href="{{ route('organization', 'preservasi') }}">
-                                                                    <div>Bidang Preservasi I</div>
-                                                                </a>
-                                                            </li>
-                                                            <li class="menu-item">
-                                                                <a class="menu-link" href="{{ route('organization', 'preservasi') }}">
-                                                                    <div>Bidang Preservasi II</div>
-                                                                </a>
-                                                            </li>
-                                                        </ul>
-                                                    </li>
+                                                    <x-menu-organization />
                                                 </ul>
                                                 <!-- <ul class="sub-menu-container mega-menu-column col-lg-3" style="box-sizing: border-box;">
                                                     <li class="menu-item mega-menu-title sub-menu">
@@ -131,7 +74,7 @@
                                                         </a>
                                                         <ul class="sub-menu-container" style="box-sizing: border-box;">
                                                             <li class="menu-item">
-                                                                <a class="menu-link" href="{{ route('gallery') }}">
+                                                                <a class="menu-link" href="{{ route('galleries.index') }}">
                                                                     <div>Foto</div>
                                                                 </a>
                                                             </li>
@@ -188,13 +131,13 @@
                                 </li>
                             </ul>
                         </li> -->
-                        <li class="menu-item {{ request()->routeIs('publikasi-index') | request()->routeIs('publikasi-single') ? 'current' : '' }}">
+                        <li class="menu-item {{ request()->routeIs('posts.index') | request()->routeIs('publikasi-single') ? 'current' : '' }}">
                             <a class="menu-link text-uppercase" href="#">
                                 <div>Publikasi</div>
                             </a>
                             <ul class="sub-menu-container">
                                 <li class="menu-item">
-                                    <a class="menu-link" href="{{ route('publikasi-index') }}">
+                                    <a class="menu-link" href="{{ route('posts.index') }}">
                                         <div>Berita</div>
                                     </a>
                                 </li>
@@ -236,12 +179,12 @@
                                     </a>
                                 </li>
                                 <li class="menu-item">
-                                    <a class="menu-link" href="{{ route('publikasi-ppid-balai') }}" target="_blank">
+                                    <a class="menu-link" href="{{ route('posts.show', 'publikasi-ppid-balai') }}" target="_blank">
                                         <div>PPID Balai</div>
                                     </a>
                                 </li>
                                 <li class="menu-item">
-                                    <a class="menu-link" href="#">
+                                    <a class="menu-link" href="https://binakonstruksi.pu.go.id/ppid-direktorat-jenderal-bina-konstruksi/">
                                         <div>Permohonan Informasi</div>
                                     </a>
                                 </li>
@@ -258,7 +201,7 @@
                             </a>
                             <ul class="sub-menu-container">
                                 <li class="menu-item">
-                                    <a class="menu-link" href="{{ route('gallery') }}">
+                                    <a class="menu-link" href="{{ route('galleries.index') }}">
                                         <div>Foto</div>
                                     </a>
                                 </li>

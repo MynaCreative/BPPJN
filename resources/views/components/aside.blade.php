@@ -5,21 +5,21 @@
                 <h4 style="color:var(--cnvs-themecolor)">Profil</h4>
             </div>
             <div class="list-group">
-                <a href="#" class="list-group-item list-group-item-action d-flex justify-content-between active bg-danger border-danger">
+                <a href="{{ route('posts.show', 'tugas-dan-fungsi') }}" class="list-group-item list-group-item-action d-flex justify-content-between active bg-danger border-danger">
                     <div>Tugas dan Fungsi</div>
                 </a>
-                <a href="#" class="list-group-item list-group-item-action d-flex justify-content-between">
+                <a href="{{ route('posts.show', 'struktur-organisasi') }}" class="list-group-item list-group-item-action d-flex justify-content-between">
                     <div>Struktur Organisasi</div>
                 </a>
-                <a href="#" class="list-group-item list-group-item-action d-flex justify-content-between">
+                <a href="{{ route('posts.show', 'informasi-pejabat') }}" class="list-group-item list-group-item-action d-flex justify-content-between">
                     <div>Informasi Pejabat</div>
                 </a>
-                <a href="#" class="list-group-item list-group-item-action d-flex justify-content-between">
+                <a href="{{ route('posts.show', 'lokasi-kantor') }}" class="list-group-item list-group-item-action d-flex justify-content-between">
                     <div>Lokasi Kantor</div>
                 </a>
             </div>
         </div>
-        <div>
+        <!-- <div>
             <div class="fancy-title mt-5 title-border">
                 <h4 style="color:var(--cnvs-themecolor)">Infografis</h4>
             </div>
@@ -50,7 +50,7 @@
                     <a href="https://online.fliphtml5.com/jstpy/acjv/"><img src="/images/buletin/4.jpg" alt="Image 4"></a>
                 </div>
             </div>
-        </div>
+        </div> -->
         <div>
             <div class="fancy-title mt-5 title-border">
                 <h4 style="color:var(--cnvs-themecolor)">Twitter Feed</h4>
