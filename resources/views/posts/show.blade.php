@@ -25,6 +25,21 @@
 @section('content')
 <div class="row gx-5 col-mb-80">
     <main class="postcontent col-lg-9">
+        @if ($item->postImages)
+        <div class="fslider flex-thumb-grid grid-4 mb-4 clearfix" data-arrows="false" data-thumbs="true">
+            <div class="flexslider">
+                <div class="slider-wrap">
+                    @foreach ($item->postImages as $image)
+                    <div class="slide" data-thumb="{{ url('storage/'.$image->thumbnail) }}">
+                        <a class="col" href="{{ url('storage/'.$image->thumbnail) }}" data-lightbox="image" data-zoom="true">
+                            <img src="{{ url('storage/'.$image->thumbnail) }}" alt="{{ $image->description }}">
+                        </a>
+                    </div>
+                    @endforeach
+                </div>
+            </div>
+        </div>
+        @endif
         {!! $item->body !!}
         <div class="card border-default my-4">
             <div class="card-body p-3">
