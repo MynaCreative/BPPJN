@@ -11,8 +11,10 @@ class PersonController extends Controller
      */
     public function index()
     {
+        $lead = Person::orderBy('sequence')->first();
         return view('persons.index', [
-            'collections' => Person::orderBy('sequence')->get()
+            'lead' => $lead,
+            'collections' => Person::where('id', '!=', $lead->id)->orderBy('sequence')->get()->chunk(3)
         ]);
     }
 }

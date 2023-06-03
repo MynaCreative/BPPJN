@@ -55,6 +55,7 @@ return [
     */
 
     'url' => env('APP_URL', 'http://localhost'),
+    'spip_url' => env('APP_SPIP', 'http://localhost'),
 
     'asset_url' => env('ASSET_URL'),
 

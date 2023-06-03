@@ -95,6 +95,13 @@
 
 <div class="container">
     <div class="fancy-title title-border title-center mt-6 text-uppercase">
+        <h3 class="fw-bold" style="color:var(--cnvs-themecolor)">Statistik Pelayanan Publik</h3>
+    </div>
+</div>
+<x-statistic />
+
+<div class="container">
+    <div class="fancy-title title-border title-center mt-6 text-uppercase">
         <h3 class="fw-bold" style="color:var(--cnvs-themecolor)">Pelayanan Publik</h3>
     </div>
     <div id="oc-clients" class="owl-carousel image-carousel carousel-widget" data-margin="60" data-loop="true" data-nav="false" data-autoplay="5000" data-pagi="false" data-items-xs="2" data-items-sm="3" data-items-md="4" data-items-lg="4" data-items-xl="4">
