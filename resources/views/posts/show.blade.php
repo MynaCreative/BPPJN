@@ -7,7 +7,7 @@
     <div class="container">
         <div class="page-title-row">
             <div class="page-title-content">
-                <h1>{{ $item->name }}</h1>
+                <!-- <h1>{{ $item->name }}</h1> -->
                 <span></span>
             </div>
             <nav aria-label="breadcrumb">
