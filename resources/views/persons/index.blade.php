@@ -53,7 +53,7 @@
                             <span class="text-color-light font-weight-semibold">{!! $item->description !!}</span>
                         </div>
                     </div>
-                    <h2 class="fs-6 fw-bold mt-3 mb-3">{{ $item->name }} {{ count($rows) }}</h2>
+                    <h2 class="fs-6 fw-bold mt-3 mb-3">{{ $item->name }}</h2>
                 </a>
             </div>
             @endforeach
